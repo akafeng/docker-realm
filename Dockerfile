@@ -1,6 +1,6 @@
 FROM debian:bullseye-slim AS builder
 
-ARG REALM_VERSION="2.3.4"
+ARG REALM_VERSION="2.4.1"
 ARG REALM_URL="https://github.com/zhboner/realm/releases/download/v${REALM_VERSION}/"
 
 RUN set -eux \
