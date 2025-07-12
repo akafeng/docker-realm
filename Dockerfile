@@ -1,6 +1,6 @@
-FROM debian:bullseye-slim AS builder
+FROM debian:bookworm-slim AS builder
 
-ARG REALM_VERSION="2.4.1"
+ARG REALM_VERSION="2.7.0"
 ARG REALM_URL="https://github.com/zhboner/realm/releases/download/v${REALM_VERSION}/"
 
 RUN set -eux \
@@ -23,7 +23,7 @@ RUN set -eux \
 
 ######
 
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 COPY --from=builder /usr/local/bin/ /usr/local/bin/
 
